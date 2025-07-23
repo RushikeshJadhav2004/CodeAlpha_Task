@@ -1,0 +1,95 @@
+ body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #141e30, #243b55);
+      color: white;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      margin-top: 2rem;
+      color: #ffd700;
+    }
+
+    .todo-container {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 2rem;
+      margin: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+      width: 90%;
+      max-width: 500px;
+    }
+
+    input[type="text"] {
+      width: 70%;
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 5px;
+      border: none;
+    }
+
+    button {
+      padding: 10px 15px;
+      margin-left: 10px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .add-btn {
+      background: #28a745;
+      color: white;
+    }
+
+    .add-btn:hover {
+      background: #218838;
+    }
+
+    .todo-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 1rem;
+    }
+
+    .todo-item {
+      background-color: #333;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .todo-item.completed {
+      text-decoration: line-through;
+      opacity: 0.6;
+    }
+
+    .actions button {
+      margin-left: 5px;
+      padding: 5px 10px;
+      font-size: 0.9rem;
+    }
+
+    .edit-btn {
+      background-color: #ffc107;
+      color: black;
+    }
+
+    .delete-btn {
+      background-color: #dc3545;
+      color: white;
+    }
+
+    .complete-btn {
+      background-color: #17a2b8;
+      color: white;
+    }

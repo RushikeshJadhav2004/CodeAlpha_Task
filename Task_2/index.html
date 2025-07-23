@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>To-Do List App</title>
+  <link rel="stylesheet" href="stylee.css">
+</head>
+<body>
+
+  <h1>📝 To-Do List</h1>
+
+  <div class="todo-container">
+    <input type="text" id="taskInput" placeholder="Enter a new task">
+    <button class="add-btn" onclick="addTask()">Add</button>
+
+    <ul id="taskList" class="todo-list"></ul>
+  </div>
+
+  <script>
+    let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+    function saveTasks() {
+      localStorage.setItem("tasks", JSON.stringify(tasks));
+    }
+
+    function renderTasks() {
+      const taskList = document.getElementById('taskList');
+      taskList.innerHTML = '';
+
+      tasks.forEach((task, index) => {
+        const li = document.createElement('li');
+        li.className = `todo-item ${task.completed ? 'completed' : ''}`;
+
+        const span = document.createElement('span');
+        span.textContent = task.text;
+
+        const actions = document.createElement('div');
+        actions.className = 'actions';
+
+        const completeBtn = document.createElement('button');
+        completeBtn.textContent = '✔';
+        completeBtn.className = 'complete-btn';
+        completeBtn.onclick = () => {
+          tasks[index].completed = !tasks[index].completed;
+          saveTasks();
+          renderTasks();
+        };
+
+        const editBtn = document.createElement('button');
+        editBtn.textContent = '✎';
+        editBtn.className = 'edit-btn';
+        editBtn.onclick = () => {
+          const newText = prompt("Edit task:", task.text);
+          if (newText !== null && newText.trim() !== '') {
+            tasks[index].text = newText.trim();
+            saveTasks();
+            renderTasks();
+          }
+        };
+
+        const deleteBtn = document.createElement('button');
+        deleteBtn.textContent = '🗑';
+        deleteBtn.className = 'delete-btn';
+        deleteBtn.onclick = () => {
+          tasks.splice(index, 1);
+          saveTasks();
+          renderTasks();
+        };
+
+        actions.appendChild(completeBtn);
+        actions.appendChild(editBtn);
+        actions.appendChild(deleteBtn);
+
+        li.appendChild(span);
+        li.appendChild(actions);
+        taskList.appendChild(li);
+      });
+    }
+
+    function addTask() {
+      const input = document.getElementById('taskInput');
+      const text = input.value.trim();
+
+      if (text === '') {
+        alert('Please enter a task!');
+        return;
+      }
+
+      tasks.push({ text, completed: false });
+      input.value = '';
+      saveTasks();
+      renderTasks();
+    }
+
+    // Render tasks on load
+    renderTasks();
+  </script>
+</body>
+</html>
