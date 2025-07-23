@@ -1,6 +1,7 @@
 
 # CodeAlpha_Task
 
+As part of my internship at CodeAlpha, I completed two assigned tasks to enhance my web development skills. Both tasks were successfully built and deployed, showcasing my ability to work on real-world projects. The source code and project details are available on my GitHub repository along with screenshots.
 
 
 
