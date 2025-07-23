@@ -1,18 +1,17 @@
 
 # CodeAlpha_Task
 
-A modern, sleek portfolio web app built using **Next.js**, **Tailwind CSS**, and **TypeScript**. Designed to showcase skills, projects, and professional background with smooth UI/UX and responsive design.
+
 
 
 ## 📸 Screenshots
 
-![Screenshot 1](<img width="1346" height="654" alt="Screenshot 2025-07-23 145352" src="https://github.com/user-attachments/assets/7e3ad1fd-ef7b-4a6a-be7e-11ff88b38194" />
-)
-*Task_1*
+### 📝 Task 1  
+![Screenshot 1](https://github.com/user-attachments/assets/7e3ad1fd-ef7b-4a6a-be7e-11ff88b38194)
 
-![Screenshot 2](<img width="1352" height="664" alt="Screenshot 2025-07-23 145320" src="https://github.com/user-attachments/assets/144a65b7-3ea6-4ac0-a2b7-d3866e012df8" />
-)
-*Task_2*
+### 📝 Task 2  
+![Screenshot 2](https://github.com/user-attachments/assets/144a65b7-3ea6-4ac0-a2b7-d3866e012df8)
+
 
 
 ## 🚀 Features
@@ -33,8 +32,8 @@ A modern, sleek portfolio web app built using **Next.js**, **Tailwind CSS**, and
 
 1. Clone the repository:
    ```bash
-   [git clone https://github.com/yourusername/portfolio-web-app.git
-   cd portfolio-web-app](https://github.com/RushikeshJadhav2004/Portfolio_Design.git)
+   [[git clone https://github.com/yourusername/portfolio-web-app.git
+   cd portfolio-web-app](https://github.com/RushikeshJadhav2004/Portfolio_Design.git)](https://github.com/RushikeshJadhav2004/CodeAlpha_Task.git)
    ```
 
 2. Install dependencies:
