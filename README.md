@@ -17,9 +17,7 @@
 ## 🚀 Features
 
 - Responsive modern layout with dark theme
-- Sections for Projects, Skills, and Contact
 - Built with scalable architecture and component-based design
-- Placeholder assets for logo and user image
 - Easily customizable
 
 ## 🛠️ Tech Stack
